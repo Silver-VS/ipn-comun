@@ -1,3 +1,4 @@
+<!-- SPDX-License-Identifier: CC0-1.0 -->
 # contenido/
 
 - Qué contiene: textos comunes en TOML (`textos/comun.es.toml`), la voz editorial (`VOZ.md`), la lista de palabras vetadas (`glosario.toml`) y el registro de cambios (`CAMBIOS.md`).

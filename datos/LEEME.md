@@ -1,3 +1,4 @@
+<!-- SPDX-License-Identifier: CC0-1.0 -->
 # datos/
 
 - Qué contiene: catálogos compartidos de IPN-tools e IPN Folio (`unidades.json`, `categorias.json`, `almacen.json`) y sus esquemas JSON en `esquemas/`.
