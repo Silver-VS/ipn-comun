@@ -1,0 +1,30 @@
+/* GENERADO desde fuentes/*.woff2; no editar */
+/* SPDX-License-Identifier: CC0-1.0. Las fuentes Noto (OFL-1.1) van en fuentes/ con su OFL.txt; sin archivo, se usa la instalada. */
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Noto Sans");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Noto Sans");
+}
+@font-face {
+  font-family: "Noto Sans Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Noto Sans Mono");
+}
+@font-face {
+  font-family: "Noto Sans Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Noto Sans Mono");
+}

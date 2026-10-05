@@ -1,0 +1,22 @@
+/* GENERADO desde tokens/alias.json; no editar */
+/* SPDX-License-Identifier: CC0-1.0 */
+/* Alias temporal de IPN Folio: migrar el código a --ipn-* y borrar este archivo. */
+:root {
+  --bg: var(--ipn-fondo);
+  --sf: var(--ipn-superficie);
+  --sf2: var(--ipn-hundido);
+  --ln: var(--ipn-linea);
+  --tx: var(--ipn-texto);
+  --mu: var(--ipn-tenue);
+  --ac: var(--ipn-acento);
+  --acs: var(--ipn-acento-suave);
+  --acx: var(--ipn-sobre-acento);
+  --ok: var(--ipn-ok);
+  --oks: var(--ipn-ok-suave);
+  --wa: var(--ipn-aviso);
+  --was: var(--ipn-aviso-suave);
+  --er: var(--ipn-error);
+  --ers: var(--ipn-error-suave);
+  --in: var(--ipn-info);
+  --ins: var(--ipn-info-suave);
+}

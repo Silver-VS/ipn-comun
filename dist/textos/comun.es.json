@@ -1,0 +1,15 @@
+{
+  "_generado": "GENERADO desde contenido/textos/comun.es.toml; no editar",
+  "version": "2026.10.1",
+  "textos": {
+    "pie.codigo_fuente": "Código fuente",
+    "pie.licencia": "Licencia {licencia}",
+    "tema.claro": "Tema claro",
+    "tema.oscuro": "Tema oscuro",
+    "tema.auto": "Según el sistema",
+    "unidad.otra": "Otra unidad académica",
+    "unidad.selector.etiqueta": "Unidad académica",
+    "aviso.cerrar.boton": "Cerrar aviso",
+    "aviso.errores.titulo": "{n, plural, one {# error} other {# errores}}"
+  }
+}

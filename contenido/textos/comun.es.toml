@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: CC0-1.0
+# Textos comunes de IPN-tools e IPN Folio (español de México, tuteo; voz en contenido/VOZ.md).
+# Reglas: claves a-z0-9_ con puntos; variables {nombre}; plurales {n, plural, one {# x} other {# xs}}.
+# Al cambiar un texto: sube `version` y anota el cambio en contenido/CAMBIOS.md.
+version = "2026.10.1"
+
+[pie]
+# Pie de página de cada producto: enlace al repositorio del código.
+codigo_fuente = "Código fuente"
+# Pie de página: licencia del producto; {licencia} es el identificador, por ejemplo AGPL-3.0.
+licencia = "Licencia {licencia}"
+
+[tema]
+# Opciones del selector de tema (botón o menú).
+claro = "Tema claro"
+oscuro = "Tema oscuro"
+# Sigue la preferencia del sistema operativo o del navegador.
+auto = "Según el sistema"
+
+[unidad]
+# Última opción del selector cuando la unidad académica de la persona no aparece en la lista.
+otra = "Otra unidad académica"
+# Etiqueta del selector de unidad académica.
+selector.etiqueta = "Unidad académica"
+
+[aviso]
+# Botón para cerrar un aviso; también es su nombre accesible.
+cerrar.boton = "Cerrar aviso"
+# Encabezado de un aviso con errores; {n} es la cantidad.
+errores.titulo = "{n, plural, one {# error} other {# errores}}"

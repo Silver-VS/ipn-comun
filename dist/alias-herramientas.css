@@ -1,0 +1,25 @@
+/* GENERADO desde tokens/alias.json; no editar */
+/* SPDX-License-Identifier: CC0-1.0 */
+/* Alias temporal de IPN-tools: migrar el código a --ipn-* y borrar este archivo. */
+:root {
+  --bg: var(--ipn-fondo);
+  --surface: var(--ipn-superficie);
+  --sunken: var(--ipn-hundido);
+  --line: var(--ipn-linea);
+  --fg: var(--ipn-texto);
+  --muted: var(--ipn-tenue);
+  --accent: var(--ipn-acento);
+  --accent-strong: var(--ipn-acento-fuerte);
+  --accent-fg: var(--ipn-sobre-acento);
+  --accent-soft: var(--ipn-acento-suave);
+  --ok: var(--ipn-ok);
+  --ok-soft: var(--ipn-ok-suave);
+  --warn: var(--ipn-aviso);
+  --warn-soft: var(--ipn-aviso-suave);
+  --bad: var(--ipn-error);
+  --bad-soft: var(--ipn-error-suave);
+  --r: var(--ipn-radio);
+  --f-display: var(--ipn-fuente-texto);
+  --f-body: var(--ipn-fuente-texto);
+  --f-mono: var(--ipn-fuente-mono);
+}

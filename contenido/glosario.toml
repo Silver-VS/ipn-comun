@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: CC0-1.0
+# Lista negra de voz editorial: verificar.mjs hace fallar cualquier texto de contenido/textos/ que la contenga
+# (sin distinguir mayúsculas). Vocabulario técnico solo en opciones avanzadas, nunca en el recorrido principal.
+vetadas = [
+  "kernel",
+  "token",
+  "clave API",
+  "runtime",
+  "backend",
+  "¡Ups!",
+  "Algo salió mal",
+  "Error inesperado",
+]
