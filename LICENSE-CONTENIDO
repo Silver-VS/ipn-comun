@@ -1,0 +1,19 @@
+CC0 1.0 Universal (Dedicación al dominio público)
+
+Aplica a: tokens/, contenido/ y datos/ (valores de diseño, textos comunes,
+voz editorial y catálogos de datos). El código (js/, herramientas/,
+componentes/, catalogo/) usa la licencia MIT del archivo LICENSE. Las fuentes
+tipográficas conservan su propia licencia (OFL-1.1) junto a cada fuente.
+
+La persona que asoció una obra a este documento la dedica al dominio público
+renunciando, en la medida permitida por la ley, a todos sus derechos de autor
+y derechos conexos sobre la obra, en todo el mundo, incluidos los derechos
+morales y de explotación, de forma irrevocable. Puedes copiar, modificar,
+distribuir y usar la obra, incluso con fines comerciales, sin pedir permiso.
+
+La obra se entrega «tal cual», sin garantías de ningún tipo. Esta dedicación
+no concede derechos sobre marcas, logotipos o imagen institucional del IPN ni
+de sus unidades académicas, que no forman parte de este repositorio.
+
+Texto legal completo: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+SPDX-License-Identifier: CC0-1.0
