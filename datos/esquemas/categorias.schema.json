@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ipn-comun/datos/esquemas/categorias.schema.json",
+  "title": "Categorías de materias (SPDX-License-Identifier: CC0-1.0)",
+  "type": "object",
+  "required": ["version", "descripcion", "orden", "categorias"],
+  "properties": {
+    "_licencia": { "type": "string" },
+    "_origen": { "type": "string" },
+    "version": { "type": "string", "pattern": "^\\d{4}\\.\\d{2}\\.\\d+$" },
+    "descripcion": { "type": "string" },
+    "orden": { "type": "array", "items": { "type": "string", "pattern": "^[a-z]+$" } },
+    "categorias": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["nombre", "incluye"],
+        "additionalProperties": false,
+        "properties": {
+          "nombre": { "type": "string", "minLength": 2 },
+          "incluye": { "type": "string" },
+          "nueva": { "type": "string" }
+        }
+      }
+    },
+    "sinonimos": { "type": "object", "additionalProperties": { "type": "string" } },
+    "cortos": { "type": "object", "additionalProperties": { "type": "string" } }
+  }
+}

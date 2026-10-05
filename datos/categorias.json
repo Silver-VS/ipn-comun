@@ -1,0 +1,100 @@
+{
+  "_licencia": "SPDX-License-Identifier: CC0-1.0",
+  "_origen": "Copiado de ipn-tools/data/categorias.json (2026-10-05); IPN-tools es el dueño del contenido por ahora.",
+  "version": "2026.10.1",
+  "descripcion": "Catálogo común de categorías (áreas de conocimiento) para organizar los mapas de todas las carreras en columnas. Base: las áreas de las trayectorias de la UPIITA. Las categorías propias de una carrera se conservan con su nombre. Los nombres son cortos para caber en los encabezados del mapa; «sinonimos» traduce nombres anteriores y «cortos» abrevia áreas propias de una carrera.",
+  "orden": [
+    "fm",
+    "comp",
+    "datos",
+    "elec",
+    "ctrl",
+    "redes",
+    "bio",
+    "quim",
+    "proc",
+    "propia",
+    "integral",
+    "prof",
+    "esp"
+  ],
+  "categorias": {
+    "fm": {
+      "nombre": "Ciencias básicas",
+      "incluye": "Matemáticas, física, probabilidad y estadística, métodos numéricos y cuantitativos."
+    },
+    "comp": {
+      "nombre": "Computación",
+      "incluye": "Programación, algoritmos, teoría de la computación, sistemas operativos, ingeniería y desarrollo de software."
+    },
+    "datos": {
+      "nombre": "Ciencia de datos e IA",
+      "incluye": "Bases de datos, inteligencia artificial, aprendizaje de máquina, minería y analítica de datos, visión, lenguaje natural.",
+      "nueva": "Agregada para la ESCOM (LCD, IIA, ISC); no tiene equivalente en las trayectorias de la UPIITA."
+    },
+    "elec": {
+      "nombre": "Electrónica",
+      "incluye": "Circuitos, electrónica analógica y digital, arquitectura de computadoras, procesamiento de señales."
+    },
+    "ctrl": {
+      "nombre": "Control y automatización",
+      "incluye": "Control, instrumentación, modelado de sistemas dinámicos."
+    },
+    "redes": {
+      "nombre": "Telecomunicaciones",
+      "incluye": "Redes de computadoras, comunicaciones, sistemas distribuidos y servicios en red."
+    },
+    "integral": {
+      "nombre": "Humanidades y gestión",
+      "incluye": "Comunicación, ética, economía, finanzas, gestión, liderazgo y habilidades sociales."
+    },
+    "prof": {
+      "nombre": "Práctica profesional",
+      "incluye": "Trabajo terminal, estancia profesional, metodología de la investigación."
+    },
+    "esp": {
+      "nombre": "Especialidad",
+      "incluye": "Optativas y líneas de especialización."
+    },
+    "bio": {
+      "nombre": "Ciencias biológicas",
+      "incluye": "Biología, microbiología, bioquímica, genética, inmunología y ecología."
+    },
+    "quim": {
+      "nombre": "Química",
+      "incluye": "Química general, orgánica y analítica, fisicoquímica y sus laboratorios."
+    },
+    "proc": {
+      "nombre": "Ingeniería de procesos",
+      "incluye": "Balances, fenómenos de transporte, termodinámica, reactores, separaciones y diseño de plantas."
+    }
+  },
+  "sinonimos": {
+    "Formación profesional": "prof",
+    "Profesional": "prof",
+    "Sistemas y control": "ctrl",
+    "Control": "ctrl",
+    "Electrónica": "elec",
+    "Informática": "comp",
+    "Computación": "comp",
+    "Físico-matemáticas": "fm",
+    "Formación integral": "integral",
+    "Comunicaciones": "redes",
+    "Especialización": "esp",
+    "Línea de especialización": "esp",
+    "Línea de aplicación": "esp",
+    "Informática y computación": "comp",
+    "Comunicaciones y redes": "redes"
+  },
+  "cortos": {
+    "Biotecnología y bioprocesos": "Biotecnología",
+    "Ciencias ambientales y bioprocesos": "Ingeniería ambiental",
+    "Ciencia e ingeniería de alimentos": "Ciencia de alimentos",
+    "Ciencias e ingeniería biomédica": "Ingeniería biomédica",
+    "Matemáticas y computación": "Matemáticas y cómputo",
+    "Energías convencionales": "Energía convencional",
+    "Energías renovables": "Energía renovable",
+    "Gestión, economía y normatividad": "Gestión energética",
+    "Titulación y optativas": "Optativas y titulación"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "_licencia": "SPDX-License-Identifier: CC0-1.0",
+  "_origen": "Unidades que maneja IPN-tools hoy (ipn-tools/data/cuenta.json y data/unidades/*/unidad.json). Sin correos ni datos personales.",
+  "version": "2026.10.1",
+  "unidades": [
+    {
+      "id": "upiita",
+      "siglas": "UPIITA",
+      "nombre": "Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas",
+      "saes": "https://www.saes.upiita.ipn.mx/",
+      "modelo": "semestral",
+      "productos": {
+        "horarios": { "url": "horarios-upiita.html", "disponible": true },
+        "electivas": { "url": "electivas.html", "disponible": true },
+        "folio": { "plantillas": [] }
+      }
+    },
+    {
+      "id": "escom",
+      "siglas": "ESCOM",
+      "nombre": "Escuela Superior de Cómputo",
+      "saes": "https://www.saes.escom.ipn.mx/",
+      "modelo": "semestral",
+      "productos": {
+        "horarios": { "url": "horarios-escom.html", "disponible": true },
+        "electivas": { "disponible": false },
+        "folio": { "plantillas": [] }
+      }
+    },
+    {
+      "id": "upibi",
+      "siglas": "UPIBI",
+      "nombre": "Unidad Profesional Interdisciplinaria de Biotecnología",
+      "saes": "https://www.saes.upibi.ipn.mx/",
+      "modelo": "niveles",
+      "productos": {
+        "horarios": { "url": "horarios-upibi.html", "disponible": true },
+        "electivas": { "disponible": false },
+        "folio": { "plantillas": [] }
+      }
+    }
+  ]
+}

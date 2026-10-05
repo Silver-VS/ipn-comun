@@ -1,0 +1,13 @@
+{
+  "_licencia": "SPDX-License-Identifier: CC0-1.0",
+  "_nota": "Los sitios de proyecto de GitHub Pages bajo silver-vs.github.io comparten origen, así que IPN-tools y Folio verían el mismo localStorage. Por eso: nada sensible (claves de servicios, datos personales) en localStorage de un origen compartido, y cada clave nueva se registra aquí con su prefijo. Folio debe tener origen propio antes de guardar claves (principios 6.4).",
+  "version": "2026.10.1",
+  "prefijos": [
+    { "prefijo": "hu.", "producto": "ipn-tools", "almacen": "localStorage", "sensible": false, "descripcion": "Horarios de la UPIITA; hu.<unidad>. en las demás unidades" },
+    { "prefijo": "ue.", "producto": "ipn-tools", "almacen": "localStorage", "sensible": false, "descripcion": "Electivas (UPIITA)" },
+    { "prefijo": "ipnt.", "producto": "ipn-tools", "almacen": "localStorage", "sensible": true, "descripcion": "Cuenta, preferencias y unidad recordada (ipnt.unidad). ipnt.gtok guarda un acceso de Google en el navegador: no replicar el patrón en Folio" },
+    { "prefijo": "saes.", "producto": "ipn-tools", "almacen": "localStorage", "sensible": true, "descripcion": "Datos que lee el Lector del SAES (saes.alumno); son datos del alumno, solo en su navegador" },
+    { "prefijo": "folio.", "producto": "ipn-folio", "almacen": "localStorage", "sensible": false, "descripcion": "Reservado para Folio (preferencias de interfaz); los proyectos van en IndexedDB y OneDrive" },
+    { "prefijo": "ipn.", "producto": "ipn-comun", "almacen": "sessionStorage", "sensible": false, "descripcion": "Utilidades compartidas; hoy solo ipn.tema (elección de tema durante la visita)" }
+  ]
+}
