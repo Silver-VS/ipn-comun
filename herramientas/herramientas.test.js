@@ -57,7 +57,7 @@ test('generador: tokens.css trae modo oscuro por preferencia y por data-tema', (
   assert.match(css, /prefers-color-scheme: dark/);
   assert.match(css, /:root\[data-tema="oscuro"\]/);
   assert.match(css, /:root\[data-tema="claro"\]/);
-  assert.match(css, /--ipn-acento: #750946;/);
+  assert.match(css, /--ipn-acento: #7A1F45;/);
 });
 
 test('el repositorio pasa verificar', () => {
@@ -116,7 +116,7 @@ test('verificar falla: dato fuera del esquema y dist desactualizado', () => {
   const dir = copia();
   try {
     editar(dir, 'datos/unidades.json', (s) => s.replace('"modelo": "niveles"', '"modelo": "trimestral"'));
-    editar(dir, 'tokens/primitivos.tokens.json', (s) => s.replace('#750946', '#760946'));
+    editar(dir, 'tokens/primitivos.tokens.json', (s) => s.replace('#7A1F45', '#7B1F45'));
     const c = codigos(dir);
     assert.ok(c.has('esquema'));
     assert.ok(c.has('dist'));

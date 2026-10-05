@@ -5,7 +5,7 @@
     "50":  { "$value": "#f7eef2", "$description": "Fondo suave de acento (claro)" },
     "200": { "$value": "#f7c6db" },
     "300": { "$value": "#ec9cbf", "$description": "Acento sobre fondos oscuros" },
-    "600": { "$value": "#750946", "$description": "Guinda web del Manual de Diseño Web IPN (POR CONFIRMAR D-c; alternativa #7A1F45 de Folio v2)" },
+    "600": { "$value": "#7A1F45", "$description": "Guinda de acento confirmado por el dueño (D-c); es el valor de Folio v2, distinto del guinda web del manual institucional" },
     "700": { "$value": "#5b1237" },
     "800": { "$value": "#2e1a24", "$description": "Fondo suave de acento (oscuro)" },
     "950": { "$value": "#1d0a13" },
