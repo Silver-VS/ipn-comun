@@ -1,0 +1,41 @@
+{
+  "$description": "SPDX-License-Identifier: CC0-1.0. Fuentes, tamaños, espaciado, radios, duraciones y puntos de quiebre. Fuente: Noto Sans / Noto Sans Mono (POR CONFIRMAR D-b; alternativa IBM Plex).",
+  "fuente": {
+    "$type": "fontFamily",
+    "texto": { "$value": "\"Noto Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif" },
+    "mono":  { "$value": "\"Noto Sans Mono\", ui-monospace, Consolas, monospace" }
+  },
+  "tamano": {
+    "$type": "dimension",
+    "xs":  { "$value": "0.75rem" },
+    "s":   { "$value": "0.875rem" },
+    "m":   { "$value": "1rem", "$description": "Texto base de 16 px con interlineado 1.5" },
+    "l":   { "$value": "1.25rem" },
+    "xl":  { "$value": "1.5rem" },
+    "xxl": { "$value": "2rem" }
+  },
+  "espaciado": {
+    "$type": "dimension",
+    "1": { "$value": "0.25rem" },
+    "2": { "$value": "0.5rem" },
+    "3": { "$value": "0.75rem" },
+    "4": { "$value": "1rem" },
+    "5": { "$value": "1.5rem" },
+    "6": { "$value": "2rem" },
+    "7": { "$value": "3rem" },
+    "8": { "$value": "4rem" }
+  },
+  "radio": { "$type": "dimension", "$value": "0.75rem", "$description": "Radio base (Aurora, 12 px)" },
+  "duracion": {
+    "$type": "duration",
+    "rapida": { "$value": "120ms" },
+    "media":  { "$value": "200ms" }
+  },
+  "quiebre": {
+    "$type": "dimension",
+    "$description": "Para media queries (CSS no admite var() ahí): se publican en dist/tokens.json",
+    "s": { "$value": "30rem" },
+    "m": { "$value": "48rem" },
+    "l": { "$value": "80rem" }
+  }
+}

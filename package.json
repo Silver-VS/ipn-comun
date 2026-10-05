@@ -1,0 +1,15 @@
+{
+  "name": "@silver-vs/ipn-comun",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tokens, textos, datos y utilidades compartidas de IPN-tools e IPN Folio",
+  "license": "MIT",
+  "scripts": {
+    "generar": "node herramientas/generar.mjs",
+    "verificar": "node herramientas/verificar.mjs",
+    "test": "node --test",
+    "catalogo": "node herramientas/abrir-catalogo.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

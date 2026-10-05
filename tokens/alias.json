@@ -1,0 +1,17 @@
+{
+  "$description": "SPDX-License-Identifier: CC0-1.0. Capa de alias temporal para migrar sin romper (principios 3.3). Nombre antiguo -> token nuevo (sin el prefijo --ipn-).",
+  "herramientas": {
+    "--bg": "fondo", "--surface": "superficie", "--sunken": "hundido", "--line": "linea",
+    "--fg": "texto", "--muted": "tenue", "--accent": "acento", "--accent-strong": "acento-fuerte",
+    "--accent-fg": "sobre-acento", "--accent-soft": "acento-suave",
+    "--ok": "ok", "--ok-soft": "ok-suave", "--warn": "aviso", "--warn-soft": "aviso-suave",
+    "--bad": "error", "--bad-soft": "error-suave", "--r": "radio",
+    "--f-display": "fuente-texto", "--f-body": "fuente-texto", "--f-mono": "fuente-mono"
+  },
+  "folio": {
+    "--bg": "fondo", "--sf": "superficie", "--sf2": "hundido", "--ln": "linea",
+    "--tx": "texto", "--mu": "tenue", "--ac": "acento", "--acs": "acento-suave", "--acx": "sobre-acento",
+    "--ok": "ok", "--oks": "ok-suave", "--wa": "aviso", "--was": "aviso-suave",
+    "--er": "error", "--ers": "error-suave", "--in": "info", "--ins": "info-suave"
+  }
+}

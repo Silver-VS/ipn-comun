@@ -1,0 +1,58 @@
+{
+  "$description": "SPDX-License-Identifier: CC0-1.0. Capa 1: valores crudos. El código no los usa directamente; solo los semánticos. Fuente: paleta web IPN (Manual de Diseño Web 2025) y estilo Aurora de IPN-tools.",
+  "guinda": {
+    "$type": "color",
+    "50":  { "$value": "#f7eef2", "$description": "Fondo suave de acento (claro)" },
+    "200": { "$value": "#f7c6db" },
+    "300": { "$value": "#ec9cbf", "$description": "Acento sobre fondos oscuros" },
+    "600": { "$value": "#750946", "$description": "Guinda web del Manual de Diseño Web IPN (POR CONFIRMAR D-c; alternativa #7A1F45 de Folio v2)" },
+    "700": { "$value": "#5b1237" },
+    "800": { "$value": "#2e1a24", "$description": "Fondo suave de acento (oscuro)" },
+    "950": { "$value": "#1d0a13" },
+    "logotipo": { "$value": "#6f1d46", "$description": "Pantone 222 C; referencia de impresos, no se usa en pantalla" }
+  },
+  "gris": {
+    "$type": "color",
+    "0":   { "$value": "#ffffff" },
+    "50":  { "$value": "#fafafa" },
+    "100": { "$value": "#f4f4f5" },
+    "200": { "$value": "#e4e4e7" },
+    "300": { "$value": "#d9d9de" },
+    "400": { "$value": "#a1a1aa" },
+    "500": { "$value": "#71717a" },
+    "600": { "$value": "#52525b" },
+    "700": { "$value": "#323237" },
+    "800": { "$value": "#18181b" },
+    "900": { "$value": "#111113" },
+    "950": { "$value": "#09090b" },
+    "ipn": { "$value": "#636569", "$description": "Cool Gray 10 C del manual institucional" }
+  },
+  "verde": {
+    "$type": "color",
+    "50":  { "$value": "#ecfdf3" },
+    "300": { "$value": "#6ee7a0" },
+    "700": { "$value": "#15803d" },
+    "950": { "$value": "#0f2a1c" }
+  },
+  "ambar": {
+    "$type": "color",
+    "50":  { "$value": "#fdf6e3" },
+    "300": { "$value": "#f5c56b" },
+    "700": { "$value": "#8a5a00" },
+    "950": { "$value": "#2f230b" }
+  },
+  "rojo": {
+    "$type": "color",
+    "50":  { "$value": "#fdecf0" },
+    "300": { "$value": "#fda4b8" },
+    "700": { "$value": "#b42346" },
+    "950": { "$value": "#3a1520" }
+  },
+  "azul": {
+    "$type": "color",
+    "50":  { "$value": "#e8f0fb", "$description": "Tomado de Folio v2 (--ins)" },
+    "300": { "$value": "#8db6f5" },
+    "700": { "$value": "#1f5fad" },
+    "950": { "$value": "#172638" }
+  }
+}

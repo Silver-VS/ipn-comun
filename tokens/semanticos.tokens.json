@@ -1,0 +1,25 @@
+{
+  "$description": "SPDX-License-Identifier: CC0-1.0. Capa 2: significado. $value es el valor claro; $extensions['ipn.oscuro'] el oscuro. El código solo usa estos.",
+  "color": {
+    "$type": "color",
+    "fondo":       { "$value": "{gris.50}",   "$extensions": { "ipn.oscuro": "{gris.950}" } },
+    "superficie":  { "$value": "{gris.0}",    "$extensions": { "ipn.oscuro": "{gris.800}" } },
+    "hundido":     { "$value": "{gris.100}",  "$extensions": { "ipn.oscuro": "{gris.900}" } },
+    "linea":       { "$value": "{gris.300}",  "$extensions": { "ipn.oscuro": "{gris.700}" }, "$description": "Borde decorativo; no sirve como único indicador de un control" },
+    "borde-control": { "$value": "{gris.500}", "$extensions": { "ipn.oscuro": "{gris.500}" }, "$description": "Borde de campos y botones (3:1)" },
+    "texto":       { "$value": "{gris.800}",  "$extensions": { "ipn.oscuro": "{gris.200}" } },
+    "tenue":       { "$value": "{gris.600}",  "$extensions": { "ipn.oscuro": "{gris.400}" } },
+    "acento":        { "$value": "{guinda.600}", "$extensions": { "ipn.oscuro": "{guinda.300}" } },
+    "acento-fuerte": { "$value": "{guinda.700}", "$extensions": { "ipn.oscuro": "{guinda.200}" } },
+    "acento-suave":  { "$value": "{guinda.50}",  "$extensions": { "ipn.oscuro": "{guinda.800}" } },
+    "sobre-acento":  { "$value": "{gris.0}",     "$extensions": { "ipn.oscuro": "{guinda.950}" } },
+    "ok":          { "$value": "{verde.700}", "$extensions": { "ipn.oscuro": "{verde.300}" } },
+    "ok-suave":    { "$value": "{verde.50}",  "$extensions": { "ipn.oscuro": "{verde.950}" } },
+    "aviso":       { "$value": "{ambar.700}", "$extensions": { "ipn.oscuro": "{ambar.300}" } },
+    "aviso-suave": { "$value": "{ambar.50}",  "$extensions": { "ipn.oscuro": "{ambar.950}" } },
+    "error":       { "$value": "{rojo.700}",  "$extensions": { "ipn.oscuro": "{rojo.300}" } },
+    "error-suave": { "$value": "{rojo.50}",   "$extensions": { "ipn.oscuro": "{rojo.950}" } },
+    "info":        { "$value": "{azul.700}",  "$extensions": { "ipn.oscuro": "{azul.300}" } },
+    "info-suave":  { "$value": "{azul.50}",   "$extensions": { "ipn.oscuro": "{azul.950}" } }
+  }
+}
