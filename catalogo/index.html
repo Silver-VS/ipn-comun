@@ -1,0 +1,155 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: MIT -->
+<!-- Catálogo visual de ipn-comun. Página estática: se abre con doble clic (sin servidor ni red).
+     Usa dist/tokens.css y dist/textos/comun.es.js (versión de los textos para file://). -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de ipn-comun</title>
+<link rel="stylesheet" href="../dist/fuentes.css">
+<link rel="stylesheet" href="../dist/tokens.css">
+<style>
+  /* Solo tokens semánticos: ningún color, tamaño ni radio fijo. */
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--ipn-fondo); color: var(--ipn-texto); font: var(--ipn-tamano-m)/1.5 var(--ipn-fuente-texto); }
+  header { position: sticky; top: 0; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; gap: var(--ipn-esp-3); padding: var(--ipn-esp-3) var(--ipn-esp-4); background: var(--ipn-superficie); border-bottom: 1px solid var(--ipn-linea); }
+  header h1 { margin: 0; font-size: var(--ipn-tamano-l); flex: 1 1 12rem; }
+  main { max-width: 72rem; margin: 0 auto; padding: var(--ipn-esp-4); }
+  h2 { margin: var(--ipn-esp-6) 0 var(--ipn-esp-3); font-size: var(--ipn-tamano-xl); }
+  p.nota { color: var(--ipn-tenue); margin: 0 0 var(--ipn-esp-3); }
+  .seg { display: inline-flex; border: 1px solid var(--ipn-borde-control); border-radius: var(--ipn-radio); overflow: hidden; }
+  .seg button { font: inherit; padding: var(--ipn-esp-2) var(--ipn-esp-4); min-height: 2.75rem; border: 0; background: var(--ipn-superficie); color: var(--ipn-texto); cursor: pointer; }
+  .seg button + button { border-left: 1px solid var(--ipn-borde-control); }
+  .seg button[aria-pressed="true"] { background: var(--ipn-acento); color: var(--ipn-sobre-acento); }
+  button:focus-visible { outline: 3px solid var(--ipn-acento); outline-offset: 2px; }
+  .rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); gap: var(--ipn-esp-3); }
+  .muestra { background: var(--ipn-superficie); border: 1px solid var(--ipn-linea); border-radius: var(--ipn-radio); overflow: hidden; }
+  .muestra .color { height: 4rem; border-bottom: 1px solid var(--ipn-linea); }
+  .muestra .datos { padding: var(--ipn-esp-2) var(--ipn-esp-3); font-size: var(--ipn-tamano-s); }
+  .muestra code { font-family: var(--ipn-fuente-mono); font-size: var(--ipn-tamano-xs); color: var(--ipn-tenue); overflow-wrap: anywhere; }
+  .par { padding: var(--ipn-esp-3); border-radius: var(--ipn-radio); border: 1px solid var(--ipn-linea); font-size: var(--ipn-tamano-s); }
+  .par b { display: block; font-size: var(--ipn-tamano-m); }
+  .estado { display: inline-block; padding: var(--ipn-esp-1) var(--ipn-esp-3); border-radius: var(--ipn-radio); font-size: var(--ipn-tamano-s); }
+  table { width: 100%; border-collapse: collapse; background: var(--ipn-superficie); border: 1px solid var(--ipn-linea); }
+  th, td { text-align: left; padding: var(--ipn-esp-2) var(--ipn-esp-3); border-bottom: 1px solid var(--ipn-linea); vertical-align: top; overflow-wrap: anywhere; }
+  th { background: var(--ipn-hundido); font-size: var(--ipn-tamano-s); }
+  td.clave { font-family: var(--ipn-fuente-mono); font-size: var(--ipn-tamano-s); }
+  .tabla { overflow-x: auto; }
+  .tam > div { display: flex; align-items: baseline; gap: var(--ipn-esp-4); padding: var(--ipn-esp-1) 0; }
+  .tam code { min-width: 9rem; font-family: var(--ipn-fuente-mono); font-size: var(--ipn-tamano-xs); color: var(--ipn-tenue); }
+  .esp > div { display: flex; align-items: center; gap: var(--ipn-esp-3); padding: var(--ipn-esp-1) 0; font-family: var(--ipn-fuente-mono); font-size: var(--ipn-tamano-xs); color: var(--ipn-tenue); }
+  .esp i { display: block; height: var(--ipn-esp-3); background: var(--ipn-acento); border-radius: var(--ipn-esp-1); }
+  @media (prefers-reduced-motion: no-preference) { button { transition: background var(--ipn-duracion-rapida); } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Catálogo de ipn-comun</h1>
+  <div class="seg" role="group" aria-label="Tema">
+    <button type="button" data-modo="auto" aria-pressed="true">Según el sistema</button>
+    <button type="button" data-modo="claro" aria-pressed="false">Claro</button>
+    <button type="button" data-modo="oscuro" aria-pressed="false">Oscuro</button>
+  </div>
+</header>
+<main>
+  <p class="nota">Documentación viva de los tokens y textos comunes. Los valores se leen de <code>dist/tokens.css</code>; cambia el tema para ver los dos modos. Versión de textos: <b id="version"></b>.</p>
+
+  <h2>Color</h2>
+  <div class="rejilla" id="colores"></div>
+
+  <h2>Pares de texto y contraste</h2>
+  <p class="nota">Razón calculada en esta página con los colores del tema activo (mínimo 4,5:1 para texto, 3:1 para componentes).</p>
+  <div class="rejilla" id="pares"></div>
+
+  <h2>Estados</h2>
+  <div class="rejilla" id="estados"></div>
+
+  <h2>Tipografía</h2>
+  <p class="nota">Noto Sans y Noto Sans Mono (por confirmar). Si la fuente no está instalada ni incluida en <code>fuentes/</code>, se usa la del sistema.</p>
+  <div class="tam" id="tamanos"></div>
+  <p style="font-family: var(--ipn-fuente-mono)">Texto monoespaciado: 0123456789 {} [] () =&gt;</p>
+
+  <h2>Espaciado, radio y duraciones</h2>
+  <div class="esp" id="espaciado"></div>
+  <p class="nota">Radio base: <code id="radio"></code> · Duraciones: <code id="duraciones"></code> · Puntos de quiebre: <code id="quiebres"></code></p>
+
+  <h2>Textos comunes</h2>
+  <div class="tabla"><table>
+    <thead><tr><th>Clave</th><th>Texto</th></tr></thead>
+    <tbody id="textos"></tbody>
+  </table></div>
+</main>
+
+<script src="../dist/textos/comun.es.js"></script>
+<script>
+(function () {
+  var raiz = document.documentElement;
+  var estilo = function (n) { return getComputedStyle(raiz).getPropertyValue(n).trim(); };
+  var el = function (tag, props, hijos) {
+    var e = document.createElement(tag);
+    Object.keys(props || {}).forEach(function (k) { if (k === 'texto') e.textContent = props[k]; else if (k === 'estilo') e.setAttribute('style', props[k]); else if (k === 'clase') e.className = props[k]; else e.setAttribute(k, props[k]); });
+    (hijos || []).forEach(function (h) { e.appendChild(h); });
+    return e;
+  };
+  var nombres = ['fondo', 'superficie', 'hundido', 'linea', 'borde-control', 'texto', 'tenue', 'acento', 'acento-fuerte', 'acento-suave', 'sobre-acento', 'ok', 'ok-suave', 'aviso', 'aviso-suave', 'error', 'error-suave', 'info', 'info-suave'];
+  var pares = [['texto', 'fondo'], ['texto', 'superficie'], ['tenue', 'superficie'], ['acento', 'superficie'], ['acento-fuerte', 'acento-suave'], ['sobre-acento', 'acento'], ['ok', 'ok-suave'], ['aviso', 'aviso-suave'], ['error', 'error-suave'], ['info', 'info-suave']];
+  var lum = function (hex) {
+    var h = hex.replace('#', ''), c = [0, 2, 4].map(function (i) { var v = parseInt(h.substr(i, 2), 16) / 255; return v <= 0.04045 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  };
+  var razon = function (a, b) { var x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+
+  function pintar() {
+    var c = document.getElementById('colores'); c.textContent = '';
+    nombres.forEach(function (n) {
+      c.appendChild(el('div', { clase: 'muestra' }, [
+        el('div', { clase: 'color', estilo: 'background:var(--ipn-' + n + ')' }),
+        el('div', { clase: 'datos' }, [el('b', { texto: n }), el('br'), el('code', { texto: '--ipn-' + n + ' ' + estilo('--ipn-' + n) })])
+      ]));
+    });
+    var p = document.getElementById('pares'); p.textContent = '';
+    pares.forEach(function (par) {
+      var r = razon(estilo('--ipn-' + par[0]), estilo('--ipn-' + par[1]));
+      p.appendChild(el('div', { clase: 'par', estilo: 'color:var(--ipn-' + par[0] + ');background:var(--ipn-' + par[1] + ')' }, [
+        el('b', { texto: par[0] + ' sobre ' + par[1] }), el('span', { texto: 'Aa texto de ejemplo · ' + r.toFixed(2).replace('.', ',') + ':1' })
+      ]));
+    });
+    var e = document.getElementById('estados'); e.textContent = '';
+    ['ok', 'aviso', 'error', 'info'].forEach(function (n) {
+      e.appendChild(el('div', {}, [el('span', { clase: 'estado', estilo: 'color:var(--ipn-' + n + ');background:var(--ipn-' + n + '-suave)', texto: n.charAt(0).toUpperCase() + n.slice(1) + ': mensaje de ejemplo' })]));
+    });
+  }
+
+  var t = document.getElementById('tamanos');
+  ['xs', 's', 'm', 'l', 'xl', 'xxl'].forEach(function (n) {
+    t.appendChild(el('div', {}, [el('code', { texto: '--ipn-tamano-' + n }), el('span', { estilo: 'font-size:var(--ipn-tamano-' + n + ')', texto: 'Alumnado de la unidad académica' })]));
+  });
+  var s = document.getElementById('espaciado');
+  for (var i = 1; i <= 8; i++) s.appendChild(el('div', {}, [el('span', { texto: '--ipn-esp-' + i, estilo: 'min-width:7rem' }), el('i', { estilo: 'width:var(--ipn-esp-' + i + ')' })]));
+  document.getElementById('radio').textContent = estilo('--ipn-radio');
+  document.getElementById('duraciones').textContent = estilo('--ipn-duracion-rapida') + ', ' + estilo('--ipn-duracion-media');
+  document.getElementById('quiebres').textContent = ['s', 'm', 'l'].map(function (k) { return estilo('--ipn-quiebre-' + k); }).join(', ');
+
+  var datos = (globalThis.IPN_TEXTOS || {})['comun.es'];
+  var cuerpo = document.getElementById('textos');
+  if (datos) {
+    document.getElementById('version').textContent = datos.version;
+    Object.keys(datos.textos).forEach(function (k) {
+      cuerpo.appendChild(el('tr', {}, [el('td', { clase: 'clave', texto: k }), el('td', { texto: datos.textos[k] })]));
+    });
+  }
+
+  var botones = document.querySelectorAll('[data-modo]');
+  function modo(m) {
+    if (m === 'auto') raiz.removeAttribute('data-tema'); else raiz.setAttribute('data-tema', m);
+    botones.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.modo === m)); });
+    pintar();
+  }
+  botones.forEach(function (b) { b.addEventListener('click', function () { modo(b.dataset.modo); }); });
+  if (window.matchMedia) matchMedia('(prefers-color-scheme: dark)').addEventListener('change', pintar);
+  pintar();
+})();
+</script>
+</body>
+</html>
